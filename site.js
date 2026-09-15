@@ -145,7 +145,7 @@ function applyEnglishCopy() {
     [".hero-copy-set:nth-child(4) .hero-copy", "Daily preparations, selected ingredients and cooking rooted in the territory."],
     [".hero-scroll", "Scroll"],
     [".restaurant-feature-copy .eyebrow", "Restaurant"],
-    [".restaurant-feature-copy h2", "Ligurian seafood cuisine on the Quinto terrace."],
+    [".restaurant-feature-copy h2", "Ligurian cuisine by the sea."],
     [
       ".restaurant-feature-copy > p:not(.eyebrow)",
       "GnamGnam serves fresh dishes, Mediterranean recipes and a family story that began in 1998: a seafront deli where lunch, dinner and takeaway stay simple, generous and close to tradition."
@@ -200,7 +200,7 @@ function applyEnglishCopy() {
     ["#event-modal .eyebrow", "Private events"],
     ["#event-modal-title", "Tell us about your event"],
     ["#menu-modal .eyebrow", "Digital menu"],
-    ["#menu-modal-title", "GnamGnam flavors"],
+    ["#menu-modal-title", "GnamGnam menu"],
     [".menu-intro", "A provisional selection inspired by the public menu: dish photos will arrive later."],
     [".menu-tab-label-lunch", "Lunch"],
     [".menu-tab-label-dinner", "Dinner"],
@@ -235,12 +235,12 @@ function applyEnglishCopy() {
 
   const storyItems = [
     ["1998", "Gnam Gnam is born", "The story begins in Cherkassy, Ukraine, with a small cafeteria inside a public hospital."],
-    ["2008", "A deli in Genoa", "Gnam Gnam is reborn as a family-run deli and takeaway pizzeria inside the historic Ivaldi poultry shop."],
-    ["2010", "A new formula", "The business evolves into takeaway deli and kebab, bringing in new customers and strengthening ties with regular guests."],
-    ["2013", "The terrace turning point", "Gnam Gnam opens for on-site dining and finally makes the seafront terrace in Genoa Quinto accessible, turning it into one of the venue's defining features."],
-    ["2019", "The major renewal", "The venue is fully renovated with a new look, a new menu and the arrival of new staff."],
-    ["2020", "Resilience and reinvention", "During Covid the business does not stop and also introduces delivery, overcoming a particularly difficult period."],
-    ["2023", "The new generation", "Daniyil, son of owner Anna, takes on an increasingly important role, bringing innovation and continuity to the family story."]
+    ["2008", "A deli in Genoa", "Gnam Gnam is reborn in Quinto as a family-run deli and takeaway pizzeria."],
+    ["2010", "A new formula", "The offer evolves with takeaway deli dishes and kebab."],
+    ["2013", "The terrace turning point", "On-site dining opens the seafront terrace, now the venue's signature feature."],
+    ["2019", "The major renewal", "A full renovation brings a new look, menu and team."],
+    ["2020", "Resilience and reinvention", "During Covid the business keeps going and introduces delivery."],
+    ["2023", "The new generation", "Daniyil brings innovation and continuity to the family story."]
   ];
 
   document.querySelectorAll(".tradition-story-item").forEach((item, index) => {
@@ -454,7 +454,7 @@ function initHeroCarousel() {
     return;
   }
 
-  const intervalMs = 5000;
+  const intervalMs = 3800;
   let activeIndex = Math.max(heroSlides.findIndex((slide) => slide.classList.contains("is-active")), 0);
   let timer = 0;
   let isPointerOver = false;

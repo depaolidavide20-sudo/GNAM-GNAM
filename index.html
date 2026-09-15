@@ -21,8 +21,8 @@
     <link rel="preload" as="image" href="assets/hero-location-mobile.png" media="(max-width: 720px)" fetchpriority="high" />
     <link rel="preload" as="image" href="assets/hero-location-desktop.png" media="(min-width: 721px)" fetchpriority="high" />
     <link rel="preload" as="image" href="assets/logo-gnamgnam-official.png" />
-    <link rel="stylesheet" href="site.css?v=20260913-gnamgnam" />
-    <script defer src="site.js?v=20260913-gnamgnam"></script>
+    <link rel="stylesheet" href="site.css?v=20260915-gnamgnam-mobile" />
+    <script defer src="site.js?v=20260915-gnamgnam-mobile"></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -59,6 +59,20 @@
   </head>
   <body class="notranslate" translate="no">
     <a class="skip-link" href="#main">Vai al contenuto</a>
+    <svg class="svg-sprite" aria-hidden="true" focusable="false">
+      <symbol id="tripadvisor-owl" viewBox="0 0 64 64">
+        <path class="ta-outline" d="M8.5 20.8C14.8 15.7 22.9 13 32 13s17.2 2.7 23.5 7.8" fill="none" stroke="var(--ta-outline)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+        <path class="ta-outline" d="M19.7 24.3H8.5l5.7 7.1a15.2 15.2 0 1 0 5.5-7.1Z" fill="none" stroke="var(--ta-outline)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+        <path class="ta-outline" d="M44.3 24.3h11.2l-5.7 7.1a15.2 15.2 0 1 1-5.5-7.1Z" fill="none" stroke="var(--ta-outline)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+        <circle class="ta-eye ta-eye-left" cx="22.1" cy="38.3" r="9.5" fill="var(--ta-green)" stroke="var(--ta-outline)" stroke-width="3" />
+        <circle class="ta-eye ta-eye-right" cx="41.9" cy="38.3" r="9.5" fill="var(--ta-red)" stroke="var(--ta-outline)" stroke-width="3" />
+        <circle class="ta-eye-core" cx="22.1" cy="38.3" r="5.4" fill="var(--white)" />
+        <circle class="ta-eye-core" cx="41.9" cy="38.3" r="5.4" fill="var(--white)" />
+        <circle class="ta-pupil" cx="22.1" cy="38.3" r="2.35" fill="var(--ta-outline)" />
+        <circle class="ta-pupil" cx="41.9" cy="38.3" r="2.35" fill="var(--ta-outline)" />
+        <path class="ta-beak" d="m28.2 31.9 3.8 5.7 3.8-5.7Z" fill="var(--ta-beak)" stroke="var(--ta-outline)" stroke-linejoin="round" stroke-width="2.2" />
+      </symbol>
+    </svg>
 
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="GnamGnam home">
@@ -208,6 +222,7 @@
       </section>
 
       <section class="restaurant-experience" id="ristorante">
+        <p class="mobile-section-kicker eyebrow" aria-hidden="true">Ristorante</p>
         <div class="restaurant-feature">
           <figure class="restaurant-feature-media">
             <picture>
@@ -222,7 +237,7 @@
           </figure>
           <div class="restaurant-feature-copy">
             <p class="eyebrow">Ristorante</p>
-            <h2>Cucina ligure di mare <span class="keep-line">sulla terrazza di Quinto.</span></h2>
+            <h2>Cucina ligure sul mare.</h2>
             <p>
               GnamGnam porta in tavola piatti freschi, ricette mediterranee e una storia di famiglia iniziata nel 1998:
               una gastronomia sul mare dove pranzo, cena e asporto restano semplici, generosi e vicini alla tradizione.
@@ -317,6 +332,7 @@
       </section>
 
       <section class="twiga-beach location-section" id="location">
+        <p class="mobile-section-kicker eyebrow" aria-hidden="true">Location</p>
         <div class="location-feature">
           <div class="beach-story location-feature-copy">
             <p class="eyebrow">Location</p>
@@ -340,12 +356,12 @@
 
           <figure class="location-feature-media">
             <picture>
-              <source srcset="assets/location-terrace-sea.jpg" media="(max-width: 720px)" />
+              <source srcset="assets/location-feature-lunch-sea.png" media="(max-width: 720px)" />
               <img
                 loading="eager"
                 decoding="async"
-                src="assets/location-terrace-sea.jpg"
-                alt="Terrazza di GnamGnam affacciata sul mare di Genova Quinto"
+                src="assets/location-feature-lunch-sea.png"
+                alt="Pranzo sulla terrazza di GnamGnam affacciata sul mare"
               />
             </picture>
           </figure>
@@ -363,20 +379,26 @@
             <div class="beach-track carousel-track" data-carousel-track>
               <figure class="beach-card" data-carousel-card>
                 <picture>
-                  <source srcset="assets/placeholder-black.svg" media="(max-width: 720px)" />
-                  <img loading="eager" decoding="async" src="assets/placeholder-black.svg" alt="Spazio fotografico ingresso GnamGnam" />
+                  <source srcset="assets/location-gallery-terrace-greenery.png" media="(max-width: 720px)" />
+                  <img loading="eager" decoding="async" src="assets/location-gallery-terrace-greenery.png" alt="Terrazza di GnamGnam vista tra piante e fiori" />
                 </picture>
               </figure>
               <figure class="beach-card" data-carousel-card>
                 <picture>
-                  <source srcset="assets/placeholder-black.svg" media="(max-width: 720px)" />
-                  <img loading="eager" decoding="async" src="assets/placeholder-black.svg" alt="Spazio fotografico terrazza GnamGnam" />
+                  <source srcset="assets/location-gallery-guests-sea.png" media="(max-width: 720px)" />
+                  <img loading="eager" decoding="async" src="assets/location-gallery-guests-sea.png" alt="Ospiti seduti sulla terrazza con vista mare" />
                 </picture>
               </figure>
               <figure class="beach-card" data-carousel-card>
                 <picture>
-                  <source srcset="assets/placeholder-black.svg" media="(max-width: 720px)" />
-                  <img loading="eager" decoding="async" src="assets/placeholder-black.svg" alt="Spazio fotografico vista mare GnamGnam" />
+                  <source srcset="assets/location-gallery-terrace-tables.png" media="(max-width: 720px)" />
+                  <img loading="eager" decoding="async" src="assets/location-gallery-terrace-tables.png" alt="Tavoli in legno sulla terrazza vista mare" />
+                </picture>
+              </figure>
+              <figure class="beach-card" data-carousel-card>
+                <picture>
+                  <source srcset="assets/location-gallery-interior-table.png" media="(max-width: 720px)" />
+                  <img loading="lazy" decoding="async" src="assets/location-gallery-interior-table.png" alt="Tavola apparecchiata interna con dettagli eleganti" />
                 </picture>
               </figure>
             </div>
@@ -390,6 +412,7 @@
       </section>
 
       <section class="tradition-section" id="tradizione" data-tradition-section aria-labelledby="tradition-title">
+        <p class="mobile-section-kicker eyebrow" aria-hidden="true">La nostra storia</p>
         <div class="tradition-intro">
           <figure class="tradition-intro-media">
             <picture>
@@ -410,31 +433,31 @@
             <div class="tradition-story-list" aria-label="Timeline storia Gnam Gnam">
               <article class="tradition-story-item">
                 <h3><span>1998</span> Nasce Gnam Gnam</h3>
-                <p>La storia comincia a Cherkassy, in Ucraina, con una piccola tavola calda all’interno di un ospedale pubblico.</p>
+                <p>La storia inizia a Cherkassy, in Ucraina, con una piccola tavola calda in un ospedale pubblico.</p>
               </article>
               <article class="tradition-story-item">
                 <h3><span>2008</span> Gastronomia a Genova</h3>
-                <p>Gnam Gnam rinasce come gastronomia e pizzeria d’asporto a conduzione familiare, nello storico locale della polleria Ivaldi.</p>
+                <p>Gnam Gnam rinasce a Quinto come gastronomia e pizzeria d’asporto a conduzione familiare.</p>
               </article>
               <article class="tradition-story-item">
                 <h3><span>2010</span> Una nuova formula</h3>
-                <p>L’attività evolve in gastronomia e kebab d’asporto, una scelta che porta nuova clientela e rafforza il rapporto con quella abituale.</p>
+                <p>La proposta evolve con gastronomia e kebab d’asporto, ampliando clientela e abitudini.</p>
               </article>
               <article class="tradition-story-item">
                 <h3><span>2013</span> La svolta della terrazza</h3>
-                <p>Gnam Gnam apre al consumo sul posto e rende finalmente accessibile la terrazza sul mare di Genova Quinto, che diventa uno dei tratti distintivi del locale.</p>
+                <p>Il consumo sul posto apre la terrazza sul mare, che diventa il tratto distintivo del locale.</p>
               </article>
               <article class="tradition-story-item">
                 <h3><span>2019</span> Il grande rinnovamento</h3>
-                <p>Il locale viene completamente ristrutturato, con un nuovo look, un nuovo menù e l’ingresso di nuovo personale.</p>
+                <p>Una ristrutturazione completa porta nuovo look, nuovo menù e nuovo personale.</p>
               </article>
               <article class="tradition-story-item">
                 <h3><span>2020</span> Resistere e reinventarsi</h3>
-                <p>Durante il Covid l’attività non si ferma e introduce anche il delivery, riuscendo a superare un periodo particolarmente difficile.</p>
+                <p>Durante il Covid l’attività non si ferma e introduce il delivery.</p>
               </article>
               <article class="tradition-story-item">
                 <h3><span>2023</span> La nuova generazione</h3>
-                <p>Daniyil, figlio della titolare Anna, assume un ruolo sempre più importante nell’attività, portando innovazione e dando continuità alla storia di famiglia.</p>
+                <p>Daniyil, figlio di Anna, porta innovazione e continuità alla storia di famiglia.</p>
               </article>
             </div>
           </div>
@@ -449,7 +472,12 @@
             <figure class="review-card">
               <div class="review-card-top">
                 <span class="review-stars" aria-label="5 stelle">★★★★★</span>
-                <span class="google-badge"><span>G</span> Google</span>
+                <span class="tripadvisor-badge">
+                  <svg class="tripadvisor-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                    <use href="#tripadvisor-owl"></use>
+                  </svg>
+                  Tripadvisor
+                </span>
               </div>
               <blockquote>"Cucina semplice, buona e una terrazza sul mare che rende speciale ogni pausa."</blockquote>
               <figcaption>
@@ -460,7 +488,12 @@
             <figure class="review-card">
               <div class="review-card-top">
                 <span class="review-stars" aria-label="5 stelle">★★★★★</span>
-                <span class="google-badge"><span>G</span> Google</span>
+                <span class="tripadvisor-badge">
+                  <svg class="tripadvisor-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                    <use href="#tripadvisor-owl"></use>
+                  </svg>
+                  Tripadvisor
+                </span>
               </div>
               <blockquote>"Piatti di mare freschi, personale gentile e atmosfera familiare a Genova Quinto."</blockquote>
               <figcaption>
@@ -471,7 +504,12 @@
             <figure class="review-card">
               <div class="review-card-top">
                 <span class="review-stars" aria-label="5 stelle">★★★★★</span>
-                <span class="google-badge"><span>G</span> Google</span>
+                <span class="tripadvisor-badge">
+                  <svg class="tripadvisor-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                    <use href="#tripadvisor-owl"></use>
+                  </svg>
+                  Tripadvisor
+                </span>
               </div>
               <blockquote>"Una gastronomia con vista mare dove fermarsi per pranzo, cena o asporto."</blockquote>
               <figcaption>
@@ -487,7 +525,11 @@
             target="_blank"
             rel="noopener"
           >
-            <span>TA</span>
+            <span class="tripadvisor-cta-icon" aria-hidden="true">
+              <svg class="tripadvisor-icon" viewBox="0 0 64 64" focusable="false">
+                <use href="#tripadvisor-owl"></use>
+              </svg>
+            </span>
             Lascia una recensione su Tripadvisor
           </a>
           <p class="review-note">Valutazione pubblica indicata intorno a 4,3/5</p>
@@ -715,8 +757,9 @@
       <div class="booking-modal-backdrop" data-modal-close></div>
       <div class="booking-dialog menu-dialog">
         <button class="modal-close" type="button" aria-label="Chiudi menù" data-modal-close></button>
+        <img class="menu-logo" src="assets/logo-gnamgnam-official.png" alt="GnamGnam" />
         <p class="eyebrow">Menù digitale</p>
-        <h2 id="menu-modal-title">Sapori di GnamGnam</h2>
+        <h2 id="menu-modal-title">Menù GnamGnam</h2>
         <p class="menu-intro">Una selezione provvisoria ispirata al menù pubblico: le foto dei piatti arriveranno in seguito.</p>
 
         <div class="menu-tabs">
