@@ -538,7 +538,7 @@ button {
 }
 
 .hero .eyebrow {
-  color: var(--white);
+  color: var(--sun);
   text-shadow: 0 2px 20px rgba(5, 39, 43, 0.42);
 }
 
@@ -1546,26 +1546,32 @@ select {
   display: grid;
   grid-template-columns: minmax(340px, 0.68fr) minmax(0, 1fr);
   gap: clamp(42px, 5.8vw, 116px);
-  align-items: center;
+  align-items: stretch;
   width: min(1800px, calc(100% - 68px));
   margin: 0 auto;
 }
 
 .tradition-intro-media {
+  height: min(720px, calc(100svh - 150px));
+  min-height: 540px;
   margin: 0;
   overflow: hidden;
 }
 
 .tradition-intro-media img {
   width: 100%;
-  height: min(720px, calc(100svh - 150px));
-  min-height: 540px;
+  height: 100%;
+  min-height: 0;
   border-radius: var(--radius);
   object-fit: cover;
   object-position: center;
 }
 
 .tradition-intro-copy {
+  display: flex;
+  min-height: min(720px, calc(100svh - 150px));
+  flex-direction: column;
+  justify-content: center;
   max-width: 880px;
 }
 
@@ -1590,36 +1596,52 @@ select {
 
 .tradition-story-list {
   display: grid;
-  gap: 10px;
-  margin-top: 28px;
+  gap: 8px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
 }
 
 .tradition-story-item {
-  border-top: 1px solid rgba(33, 28, 24, 0.12);
-  padding-top: 10px;
+  position: relative;
+  border-top: 1px solid rgba(33, 28, 24, 0.1);
+  padding: 8px 0 0 24px;
 }
 
-.tradition-story-item h3 {
+.tradition-story-item::before {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border: 1px solid rgba(35, 57, 72, 0.38);
+  border-radius: 50%;
+  background: var(--sun);
+  content: "";
+}
+
+.tradition-story-item strong {
+  display: block;
   margin: 0;
   color: rgba(33, 28, 24, 0.9);
   font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
-  font-size: clamp(0.95rem, 1.16vw, 1.12rem);
+  font-size: clamp(0.88rem, 0.98vw, 1rem);
   font-weight: 900;
   letter-spacing: 0.02em;
-  line-height: 1.22;
+  line-height: 1.16;
 }
 
-.tradition-story-item h3 span {
+.tradition-story-item strong span {
   color: var(--sea);
   font-weight: 900;
 }
 
 .tradition-story-item p {
-  margin: 4px 0 0;
+  margin: 2px 0 0;
   color: rgba(33, 28, 24, 0.68);
-  font-size: clamp(0.88rem, 0.98vw, 0.98rem);
+  font-size: clamp(0.78rem, 0.86vw, 0.88rem);
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.28;
 }
 
 .tradition-scroll {
@@ -1996,15 +2018,6 @@ select {
   box-shadow: 0 18px 54px rgba(33, 28, 24, 0.16);
 }
 
-.review-note {
-  width: fit-content;
-  margin: 14px auto 0;
-  color: var(--sea);
-  font-size: 0.94rem;
-  font-weight: 800;
-  text-align: center;
-}
-
 .contacts-section {
   padding: 28px 34px 32px;
   background: var(--paper);
@@ -2281,6 +2294,15 @@ select {
   justify-items: center;
   width: min(980px, 100%);
   margin: 0 auto;
+}
+
+.footer-logo {
+  width: clamp(58px, 6vw, 82px);
+  height: clamp(58px, 6vw, 82px);
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
 }
 
 .footer-company-name {
@@ -2789,6 +2811,13 @@ select {
   box-shadow: 0 12px 34px rgba(33, 28, 24, 0.16);
 }
 
+.menu-dialog > .eyebrow,
+.menu-dialog h2,
+.menu-intro {
+  justify-self: center;
+  text-align: center;
+}
+
 .menu-dialog h2 {
   margin-bottom: 10px;
   font-size: clamp(2.1rem, 4.3vw, 4rem);
@@ -2798,7 +2827,8 @@ select {
 }
 
 .menu-intro {
-  margin: -2px 0 22px;
+  max-width: 620px;
+  margin: -2px auto 22px;
   color: var(--muted);
   font-size: clamp(0.95rem, 1.8vw, 1.1rem);
   font-weight: 660;
@@ -3661,7 +3691,7 @@ select {
     padding-top: 16px;
   }
 
-  .tradition-story-item h3 {
+  .tradition-story-item strong {
     font-size: 0.98rem;
   }
 
@@ -3861,12 +3891,14 @@ select {
   }
 
   .contact-item {
-    grid-template-columns: 1fr;
-    justify-items: center;
+    grid-template-columns: 28px minmax(0, 1fr);
+    justify-items: start;
+    align-items: start;
     gap: 8px;
     margin-top: 5px;
     border-radius: 12px;
-    padding: 6px 8px;
+    padding: 9px 10px;
+    text-align: left;
   }
 
   .contact-icon {
@@ -3986,10 +4018,10 @@ select {
     width: min(620px, 100%);
   }
 
-  .footer-company-name {
-    max-width: 18em;
-    font-size: clamp(1.32rem, 5.8vw, 1.95rem);
-    line-height: 1.08;
+  .footer-logo {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
   }
 
   .footer-line,
@@ -4134,8 +4166,8 @@ select {
 
   .mobile-cta-reservation {
     gap: 9px;
-    background: linear-gradient(180deg, var(--sea) 0%, var(--sea-dark) 100%);
-    color: var(--white);
+    background: var(--white);
+    color: var(--ink);
   }
 
   body.hero-mobile-cta .mobile-cta {
@@ -4266,7 +4298,6 @@ select {
 
   .menu-dialog .eyebrow {
     margin-bottom: 6px;
-    padding-right: 48px;
     font-size: 0.68rem;
   }
 
@@ -4278,14 +4309,13 @@ select {
 
   .menu-dialog h2 {
     margin-bottom: 6px;
-    padding-right: 48px;
     font-size: clamp(1.55rem, 6.3vw, 2rem);
     line-height: 0.96;
   }
 
   .menu-intro {
-    margin: 0 0 8px;
-    max-width: calc(100% - 48px);
+    max-width: min(100%, 320px);
+    margin: 0 auto 8px;
     font-size: 0.72rem;
     line-height: 1.25;
   }

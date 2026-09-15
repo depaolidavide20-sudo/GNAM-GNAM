@@ -152,6 +152,7 @@ function applyEnglishCopy() {
     ],
     [".restaurant-info-panel span", "Info & reservations"],
     [".restaurant-info-panel strong", "Deli, Ligurian cuisine and seafront terrace"],
+    [".restaurant-experience > .mobile-section-kicker", "Restaurant"],
     [".event-block .eyebrow", "Events"],
     [".event-copy h3", "Plan your event with us"],
     [
@@ -167,15 +168,30 @@ function applyEnglishCopy() {
     ],
     [".beach-info-panel span", "Address"],
     [".beach-info-panel strong", "Via Angelo Gianelli 47R · Genoa 16166"],
+    [".location-section > .mobile-section-kicker", "Location"],
+    [".tradition-section > .mobile-section-kicker", "Our story"],
     [".tradition-intro-copy .eyebrow", "Our story"],
-    [".tradition-intro-copy h2", "Our story"],
+    [".tradition-intro-copy h2", "Family roots"],
+    [".tradition-story-item:nth-child(1) strong", "1998 Gnam Gnam is born"],
+    [".tradition-story-item:nth-child(1) p", "The first cafeteria opens in Cherkassy, Ukraine."],
+    [".tradition-story-item:nth-child(2) strong", "2008 Genoa Quinto"],
+    [".tradition-story-item:nth-child(2) p", "A family-run deli and takeaway pizzeria."],
+    [".tradition-story-item:nth-child(3) strong", "2010 New formula"],
+    [".tradition-story-item:nth-child(3) p", "Deli dishes and kebab bring in new regular guests."],
+    [".tradition-story-item:nth-child(4) strong", "2013 Seafront terrace"],
+    [".tradition-story-item:nth-child(4) p", "On-site dining opens with a view over Genoa Quinto."],
+    [".tradition-story-item:nth-child(5) strong", "2019 Renewal"],
+    [".tradition-story-item:nth-child(5) p", "A new look, new menu and new team members."],
+    [".tradition-story-item:nth-child(6) strong", "2020 Delivery"],
+    [".tradition-story-item:nth-child(6) p", "During Covid the business resists and reinvents itself."],
+    [".tradition-story-item:nth-child(7) strong", "2023 New generation"],
+    [".tradition-story-item:nth-child(7) p", "Daniyil brings family continuity and innovation."],
     [".review-pill", "Reviews"],
     [".reviews-inner h2", "What guests say"],
     [".review-card:nth-child(1) blockquote", "\"Simple, good cooking and a seafront terrace that makes every break special.\""],
     [".review-card:nth-child(2) blockquote", "\"Fresh seafood dishes, kind staff and a family atmosphere in Genoa Quinto.\""],
     [".review-card:nth-child(3) blockquote", "\"A deli with a sea view for lunch, dinner or takeaway.\""],
     [".review-swipe-hint", "Swipe to read the reviews"],
-    [".review-note", "Public rating indicated around 4.3/5"],
     [".contact-pill", "Contacts"],
     [".contact-card h2", "Come visit us."],
     [".contact-card > .contact-item:nth-of-type(1) div > span", "How to reach us"],
@@ -209,6 +225,25 @@ function applyEnglishCopy() {
     [".footer-legal-links a:nth-of-type(2)", "Cookie Policy"],
     [".footer-legal-links a:nth-of-type(3)", "Legal notes"],
   ].forEach(([selector, text]) => setFullText(selector, text));
+
+  [
+    [".tradition-story-item:nth-child(1) strong", "<span>1998</span> Gnam Gnam is born"],
+    [".tradition-story-item:nth-child(2) strong", "<span>2008</span> Genoa Quinto"],
+    [".tradition-story-item:nth-child(3) strong", "<span>2010</span> New formula"],
+    [".tradition-story-item:nth-child(4) strong", "<span>2013</span> Seafront terrace"],
+    [".tradition-story-item:nth-child(5) strong", "<span>2019</span> Renewal"],
+    [".tradition-story-item:nth-child(6) strong", "<span>2020</span> Delivery"],
+    [".tradition-story-item:nth-child(7) strong", "<span>2023</span> New generation"],
+  ].forEach(([selector, html]) => {
+    const element = document.querySelector(selector);
+
+    if (!element) {
+      return;
+    }
+
+    rememberHtml(element);
+    element.innerHTML = html;
+  });
 
   setAllFullText(".review-card figcaption strong", "Online guest");
   setAllFullText(".review-card figcaption span", "Public review");
