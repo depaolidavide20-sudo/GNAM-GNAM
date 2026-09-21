@@ -118,6 +118,8 @@ function restoreItalianCopy() {
 }
 
 function applyEnglishCopy() {
+  document.querySelectorAll(".tradition-story-item").forEach(rememberHtml);
+
   document.title = "GnamGnam | Seafront deli and restaurant in Genoa";
   metaDescription?.setAttribute(
     "content",
